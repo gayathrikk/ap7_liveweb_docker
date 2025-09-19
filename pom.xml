@@ -89,7 +89,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <test>com.test.DockerStatusTest.dgx3_mcp_server</test>
+                    <test>com.test.DockerStatusTest.ap7_liveweb</test>
                 </configuration>
             </plugin>
         </plugins>
