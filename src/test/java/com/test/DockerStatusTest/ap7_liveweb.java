@@ -89,7 +89,7 @@ public class ap7_liveweb {
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "587");
 
-        jakarta.mail.Session mailSession = jakarta.mail.Session.getInstance(props, new Authenticator() {
+       javax.mail.Session mailSession = javax.mail.Session.getInstance(props, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(username, password);
             }
@@ -118,3 +118,4 @@ public class ap7_liveweb {
     }
 
 }
+
