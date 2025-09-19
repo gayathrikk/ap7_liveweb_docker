@@ -1,13 +1,14 @@
 package com.test.DockerStatusTest;
 
 import com.jcraft.jsch.*;
-import jakarta.mail.*;
-import jakarta.mail.internet.*;
+import javax.mail.*;
+import javax.mail.internet.*;
 import org.testng.annotations.Test;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Properties;
+
 
 public class ap7_liveweb {
 
@@ -115,4 +116,5 @@ public class ap7_liveweb {
             e.printStackTrace();
         }
     }
+
 }
