@@ -18,12 +18,12 @@ public class ap7_liveweb {
         String vmIpAddress = "172.20.23.50";
         String username = "hbp";
         String password = "Health#123";
-        String containerId = "1f5eae099b33";
+        String containerName = "hbp_tapweb_web.1.gzwxh7y5cpfqmdzweyhsbhptc";
 
-        System.out.println("ap7 LiveWeb Docker ID = " + containerId);
+        System.out.println("ap7 LiveWeb Docker Name = " + containerName);
 
-        if (containerId.isEmpty()) {
-            System.out.println("Container ID is required.");
+        if (containerName.isEmpty()) {
+            System.out.println("Container Name is required.");
             return;
         }
 
@@ -34,9 +34,9 @@ public class ap7_liveweb {
             session.setConfig("StrictHostKeyChecking", "no");
             session.connect();
 
-            // Execute the docker inspect command to check the container's status
+            // Execute the docker inspect command to check the container's status by NAME
             ChannelExec channel = (ChannelExec) session.openChannel("exec");
-            channel.setCommand("docker inspect --format='{{.State.Status}}' " + containerId);
+            channel.setCommand("docker inspect --format='{{.State.Status}}' " + containerName);
             channel.setInputStream(null);
             channel.setErrStream(System.err);
             BufferedReader reader = new BufferedReader(new InputStreamReader(channel.getInputStream()));
@@ -118,4 +118,3 @@ public class ap7_liveweb {
     }
 
 }
-
