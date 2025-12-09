@@ -17,8 +17,8 @@ public class ap7_liveweb {
 
         String vmIpAddress = "172.20.23.50";
         String username = "hbp";
-        String password = "Health#123";
-        String containerName = "hbp_tapweb_web.1.gzwxh7y5cpfqmdzweyhsbhptc";
+        String password = "hbpsgbclab@123";
+        String containerName = "web";
 
         System.out.println("ap7 LiveWeb Docker Name = " + containerName);
 
@@ -118,3 +118,4 @@ public class ap7_liveweb {
     }
 
 }
+
